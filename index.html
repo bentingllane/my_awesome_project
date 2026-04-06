@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Resume</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+   <div class="sidebar">
+        <h2>My Resume</h2>
+        <ul>
+            <li><a href="#about">👤 About</a></li>
+            <li><a href="#education">🎓 Education</a></li>
+            <li><a href="#skills">⚡ Skills</a></li>
+            <li><a href="#projects">💻 Projects</a></li>
+            <li><a href="#contact">📩 Contact</a></li>
+        </ul>
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+    </div>
+
+    <div class="content">
+        <section id="about">
+            <div class="profile-box">
+                <img src="assets/profile.jpg" alt="Profile Photo">
+                <div class="profile-text">
+                    <h1>Hello, visitor! 👋</h1>
+                    <h2>I'm Llane Glaiza Benting</h2>
+                    <p><strong>Full-Stack Developer</strong></p>
+                    <p>I’m Llane, an IT student and aspiring full-stack developer from Libona, Bukidnon, Philippines. I specialize in creating efficient systems like POS and Inventory apps, combining clean code with intuitive interfaces. I strive to design solutions that are both practical and visually appealing, aiming for seamless functionality that empowers users and reflects professional-quality development.</p>
+                    <p>Email: <a href="mailto:benting.llaneglaiza03@gmail.com">benting.llaneglaiza03@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+639123456789">+63 912 345 6789</a></p>
+                    <p>Location: Libona, Bukidnon, Philippines</p>
+                    <p><a href="https://github.com/bentingllane/my_awesome_project" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="card">
+                <p><strong>Elementary:</strong> San Isidro Elementary School</p>
+                <p style="opacity:0.7;">San Isidro, San Jose, Libona, Bukidnon</p>
+            </div>
+            <div class="card">
+                <p><strong>Junior High School:</strong> Libona National High School</p>
+                <p style="opacity:0.7;">Crossing Libona, Bukidnon</p>
+            </div>
+            <div class="card">
+                <p><strong>Senior High School:</strong> Libona National High School</p>
+                <p style="opacity:0.7;">Crossing Libona, Bukidnon</p>
+            </div>
+            <div class="card">
+                <p><strong>College (Present):</strong> University of Science and Technology of Southern Philippines</p>
+                <p style="opacity:0.7;">Claro M. Recto Avenue, Lapasan 9000, Cagayan de Oro City</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <input type="text" id="searchSkill" placeholder="Search skill...">
+            <ul id="skillList">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>MySQL</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-controls">
+                <button id="toggleProjects">Show/Hide</button>
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('system')">Systems</button>
+            </div>
+            <div class="projectBox">
+                <div class="card project-item" data-type="system">
+                    <h3>POS System</h3>
+                    <p>A Tkinter-based system with cart, receipt, and profit tracking.</p>
+                </div>
+                <div class="card project-item" data-type="system">
+                    <h3>Inventory System</h3>
+                    <p>Stock monitoring with alerts and data management.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form onsubmit="return validateForm()">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Your Email">
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
